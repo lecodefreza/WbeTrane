@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WaterInBlood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="base">
+        <div class="navbar">
+            <img src="logo.png" alt="logo">
+            <button type="button">Connectez-Vous</button>
+        </div>
+        <div class="content">
+            <small>Bienvenue Sous Marin</small>
+            <h1>World's Is Dead</h1>
+            <button type="button"><a href="login.html">Rejoins-Nous</button>
+        </div>
+        <div class="bubble">
+            <script type="text/javascript">
+                const cursor = document.querySelector(".bubble");
+
+                document.addEventListener("mousemove", (e) => {
+                    let x = e.pageX;
+                    let y = e.pageY;
+
+                    cursor.style.top = y + "px";
+                    cursor.style.left = x + "px";
+                    cursor.style.display = "block";
+
+
+                    function mouseStopped() {
+                        cursor.style.display = "none";
+                    }
+                    clearTimeout(timeout);
+                    timeout = setTimeout(mouseStopped, 1000);
+
+                });
+
+                document.addEventListener("mouseout", () => {
+                    cursor.style.display = "none";
+                })
+
+
+
+
+            </script>
+
+        </div>
+    </div>
+    
+</body>
+</html>
